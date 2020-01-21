@@ -14,8 +14,8 @@ namespace Zza.BusinessLogicLayer.Data
     {
         private ApplicationDbContext _applicationDbContext;
         private ICustomerRepository<Guid,Customer> _customerRepository;
-        private IOrderRepository<Guid, Order> _orderRepository;
-        private IProductRepository<Guid, Product> _productRepository;
+        private IOrderRepository<long, Order> _orderRepository;
+        private IProductRepository<int, Product> _productRepository;
         public ZzaDataService()
         {
             _applicationDbContext = new ApplicationDbContext();

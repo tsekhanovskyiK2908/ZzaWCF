@@ -9,7 +9,7 @@ using Zza.Entities;
 
 namespace Zza.DataAccessLayer.ConcreteRepositories
 {
-    public class OrderRepository : Repository<Guid, Order>, IOrderRepository<Guid, Order>
+    public class OrderRepository : Repository<long, Order>, IOrderRepository<long, Order>
     {
         private ApplicationDbContext _applicationDbContext;
         public OrderRepository(ApplicationDbContext applicationDbContext)
@@ -33,7 +33,7 @@ namespace Zza.DataAccessLayer.ConcreteRepositories
             return _applicationDbContext.Orders.ToList();
         }
 
-        public override Order GetById(Guid id)
+        public override Order GetById(long id)
         {
             return _applicationDbContext.Orders.FirstOrDefault(o => o.Id == id);
         }

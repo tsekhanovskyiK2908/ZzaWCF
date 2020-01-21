@@ -17,7 +17,7 @@ namespace Zza.BusinessLogicLayer.Data
         void AddOrder(Order order);
         //Products
         List<Product> GetAllProducts();
-        void AddProducts(Product product)
+        void AddProducts(Product product);
        
     }
 }

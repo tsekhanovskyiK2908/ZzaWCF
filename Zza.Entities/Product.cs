@@ -11,7 +11,7 @@ namespace Zza.Entities
     public class Product
     {
         [DataMember]
-        public Guid Id { get; set; }
+        public int Id { get; set; }
         [DataMember]
         public string Name { get; set; }
         [DataMember]

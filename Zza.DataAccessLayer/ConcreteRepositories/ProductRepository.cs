@@ -9,7 +9,7 @@ using Zza.Entities;
 
 namespace Zza.DataAccessLayer.ConcreteRepositories
 {
-    public class ProductRepository : Repository<Guid, Product>, IProductRepository<Guid, Product>
+    public class ProductRepository : Repository<int, Product>, IProductRepository<int, Product>
     {
         private ApplicationDbContext _applicationDbContext;
         public ProductRepository(ApplicationDbContext applicationDbContext)
@@ -33,7 +33,7 @@ namespace Zza.DataAccessLayer.ConcreteRepositories
             return _applicationDbContext.Products.ToList();
         }
 
-        public override Product GetById(Guid id)
+        public override Product GetById(int id)
         {
             return _applicationDbContext.Products.FirstOrDefault(p => p.Id == id);
         }

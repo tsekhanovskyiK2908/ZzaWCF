@@ -11,7 +11,7 @@ namespace Zza.Entities
     public class OrderItem
     {   
         [DataMember]
-        public Guid Id { get; set; }
+        public long Id { get; set; }
         public Order Order { get; set; }
         [DataMember]
         public Guid OrderId { get; set; }
