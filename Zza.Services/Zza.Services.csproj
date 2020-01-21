@@ -57,11 +57,16 @@
   <ItemGroup>
     <Compile Include="IZzaService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ZzaService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Zza.BusinessLogicLayer\Zza.BusinessLogicLayer.csproj">
+      <Project>{942d8945-81e8-4258-8918-58dc0eaf34fa}</Project>
+      <Name>Zza.BusinessLogicLayer</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Zza.Entities\Zza.Entities.csproj">
       <Project>{7f6ad264-5058-4b74-82d6-cbf8a592849f}</Project>
       <Name>Zza.Entities</Name>
