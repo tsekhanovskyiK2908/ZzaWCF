@@ -14,10 +14,10 @@ namespace Zza.Entities
         public long Id { get; set; }
         public Order Order { get; set; }
         [DataMember]
-        public Guid OrderId { get; set; }
+        public long OrderId { get; set; }
         public Product Product { get; set; }
         [DataMember]
-        public Guid ProductId { get; set; }
+        public int ProductId { get; set; }
         [DataMember]
         public int Quantity { get; set; }
         [DataMember]

@@ -17,7 +17,7 @@ namespace Zza.Entities
         public Guid CustomerId { get; set; }
         public OrderStatus OrderStatus { get; set; }
         [DataMember]
-        public Guid OrderStatusId { get; set; }
+        public int OrderStatusId { get; set; }
         [DataMember]
         public DateTime OrderDate { get; set; }
         [DataMember]
