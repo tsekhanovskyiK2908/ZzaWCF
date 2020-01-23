@@ -18,6 +18,8 @@ namespace Zza.DataAccessLayer
         public DbSet<OrderItem> OrderItems { get; set; }
         public DbSet<OrderStatus> OrderStatus { get; set; }
         public DbSet<Product> Products { get; set; }
+        public DbSet<ProductSize> ProductSizes { get; set; }
+        public DbSet<ProductOption> ProductOptions { get; set; }
 
         public ApplicationDbContext() :base("ZzaDb")
         {
@@ -32,6 +34,8 @@ namespace Zza.DataAccessLayer
                 .Property(c => c.Id) // Id is set by client
                 .HasDatabaseGeneratedOption(DatabaseGeneratedOption.None);
             modelBuilder.Entity<Customer>().Ignore(c => c.FullName);
+
+            //modelBuilder.Ignore<Order>();
         }
     }
 }
