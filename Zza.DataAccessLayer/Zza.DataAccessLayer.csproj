@@ -58,6 +58,35 @@
     <Compile Include="ConcreteRepositories\OrderRepository.cs" />
     <Compile Include="ConcreteRepositories\ProductRepository.cs" />
     <Compile Include="IRepository.cs" />
+    <Compile Include="Migrations\202001241311546_InitialMigration.cs" />
+    <Compile Include="Migrations\202001241311546_InitialMigration.designer.cs">
+      <DependentUpon>202001241311546_InitialMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001241317277_PopulatePreviouslyCreatedTables.cs" />
+    <Compile Include="Migrations\202001241317277_PopulatePreviouslyCreatedTables.designer.cs">
+      <DependentUpon>202001241317277_PopulatePreviouslyCreatedTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001241504263_CreateOrdersAndOrderItems.cs" />
+    <Compile Include="Migrations\202001241504263_CreateOrdersAndOrderItems.designer.cs">
+      <DependentUpon>202001241504263_CreateOrdersAndOrderItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001241516051_AddStoreIdToOrder.cs" />
+    <Compile Include="Migrations\202001241516051_AddStoreIdToOrder.designer.cs">
+      <DependentUpon>202001241516051_AddStoreIdToOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001241525227_AddOrderItemOptions.cs" />
+    <Compile Include="Migrations\202001241525227_AddOrderItemOptions.designer.cs">
+      <DependentUpon>202001241525227_AddOrderItemOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001241530230_AddProductOptionToOrderItemOption.cs" />
+    <Compile Include="Migrations\202001241530230_AddProductOptionToOrderItemOption.designer.cs">
+      <DependentUpon>202001241530230_AddProductOptionToOrderItemOption.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202001241533391_PopulateOrderTables.cs" />
+    <Compile Include="Migrations\202001241533391_PopulateOrderTables.designer.cs">
+      <DependentUpon>202001241533391_PopulateOrderTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\ICustomerRepository.cs" />
     <Compile Include="Repositories\IOrderItemRepository.cs" />
@@ -75,7 +104,33 @@
       <Name>Zza.Entities</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202001241311546_InitialMigration.resx">
+      <DependentUpon>202001241311546_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001241317277_PopulatePreviouslyCreatedTables.resx">
+      <DependentUpon>202001241317277_PopulatePreviouslyCreatedTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001241504263_CreateOrdersAndOrderItems.resx">
+      <DependentUpon>202001241504263_CreateOrdersAndOrderItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001241516051_AddStoreIdToOrder.resx">
+      <DependentUpon>202001241516051_AddStoreIdToOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001241525227_AddOrderItemOptions.resx">
+      <DependentUpon>202001241525227_AddOrderItemOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001241530230_AddProductOptionToOrderItemOption.resx">
+      <DependentUpon>202001241530230_AddProductOptionToOrderItemOption.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202001241533391_PopulateOrderTables.resx">
+      <DependentUpon>202001241533391_PopulateOrderTables.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PopulateTables1.sql" />
+    <Content Include="PopulateTables2.sql" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

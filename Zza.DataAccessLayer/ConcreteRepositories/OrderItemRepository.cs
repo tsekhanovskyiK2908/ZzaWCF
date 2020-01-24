@@ -30,12 +30,12 @@ namespace Zza.DataAccessLayer.ConcreteRepositories
         }
 
         public override List<OrderItem> GetAllEntities()
-        {
+        {            
             return _applicationDbContext.OrderItems.ToList();
         }
 
         public override OrderItem GetById(long id)
-        {
+        {            
             return _applicationDbContext.OrderItems.FirstOrDefault(oi => oi.Id == id);
         }
 

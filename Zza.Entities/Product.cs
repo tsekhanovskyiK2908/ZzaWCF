@@ -22,11 +22,20 @@ namespace Zza.Entities
         [DataMember]
         [Required]
         public string Description { get; set; }
+
+        [DataMember]
         public string Image { get; set; }
+        [DataMember]
         [Required]
         public bool HasOptions { get; set; }
+
+        [DataMember]
         public bool IsVegetarian { get; set; }
+
+        [DataMember]
         public bool WithTomatoSauce { get; set; }
+
+        [DataMember]
         public string SizeIds { get; set; }
     }
 }
